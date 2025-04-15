@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQuest-day2</title>
+</head>
+<body>
+    <h3 >Ques1. What are objects in javascript?</h3>
+    <p>An object is a collection of related data and/or functionality <br>
+    ( which usually consists of several varialbes and function - <br>
+    which are called propeties and methods when they are inside objects.)</p>
+
+<hr>
+    <h3 >Ques2.What are function?</h3>
+    <p>A function in JavaScript is a block of code designed to perform a task. You can call (run) the function whenever you need it.</p>
+    <h4>there are 3 way of create a function</h4>
+    <ol type="1">
+    <li>Regular function</li>
+    <li>Arrow function</li>
+    <li>function Expression</li>
+    </ol>
+    <hr>
+    <h3 > Ques3.What is an event loop and call stack.</h3>
+<p> call stack is a way for the JavaScript engine to keep track of its place in code that calls multiple functions. <br>
+     It has information on what function is being run and what functions are invoked from within that function.
+</p>
+<hr>
+<h3 > Ques4. What is the DOM?</h3>
+<p>It's a tree-like structure that the browser creates from your HTML. <br>
+    It represents the web page as objects that JavaScript can access and manipulate. <br>
+    So, the DOM lets you change HTML, CSS, or content with JavaScript!</p>
+    <h2 id="title">Welcome!</h2>
+    <h2 id="title">Hello, World!</h2>
+    <hr>
+<h3> Ques5.Difference between undefined vs not defined vs NaN</h3>
+ <h4>undefined</h4>
+ <p>
+     A variable is declared but hasn't been assigned a value yet. <br>
+     type: undefined
+    Who gives its?: JavaScript automatically assigns it.</p>
+    <h4>not defined</h4>
+    <p>
+        Meaning: A variable has not been declared at all in the scope. <br>
+Type: ReferenceError <br>
+
+Who gives it?: JavaScript engine throws an error when trying to access it.
+    </p>
+    <h4>NaN  (Not a Number)</h4>
+    <P>
+       
+        Meaning: It's a special value that represents a result that is not a valid number.
+        
+        Type: number
+        
+        When it happens?: Usually from an invalid math operation.
+    </P>
+    <hr>
+    <h3>Question 6: What are arrow functions?</h3>
+    <p>Arrow functions are a concise way to define functions using =>, and they don’t have their own this context.</p>
+ <hr>
+    <h3>Question 7: What is the for-in loop in JavaScript? Give its syntax</h3>
+    <p>The JavaScript for in statement loops through the properties of an Object</p>
+    <pre>
+const obj = { a: 1, b: 2 };
+for (let key in obj) {
+    console.log(key, obj[key]);
+}
+    </pre>
+<hr>
+    <h3>Question 8: Explain Local Scope, Block Scope, Functional Scope and Scope Chain</h3>
+    <p><strong>Local Scope:</strong> Local scope means that a variable is accessible only inside the function where it is defined.<br>
+       <strong>Block Scope:</strong> Block scope applies to variables declared with let or const inside a pair of curly braces {} like in if, for, etc.<br>
+       <strong>Functional Scope:</strong>This means variables declared with var are limited to the entire function, not just inside the block.<br>
+       <strong>Scope Chain:</strong> \The scope chain is the process JS uses to look for variables: it starts from the current scope and moves outward until it finds the variable.</p>
+<hr>
+    <h3>Question 9: Difference between null and undefined</h3>
+    <p><strong>null:</strong>  "This variable has no value on purpose."<br>
+       <strong>undefined:</strong>A variable that has been declared but has not been assigned a value</p>
+<hr>
+    <h3>Question 10: map and filter example</h3>
+    <p><strong>map:</strong>  "creates a new array by applying a function to each element of the original array."<br>
+        <strong>filter:</strong>creates a new array that contains only the elements that pass a certain condition (return true in the callback).</p>
+       <pre>
+        const numbers = [1, 2, 3, 4, 5, 6];
+
+// Using map to square each number
+const squares = numbers.map(num => num * num);
+
+// Using filter to get only even numbers
+const evens = numbers.filter(num => num % 2 === 0);
+
+console.log("Original array:", numbers);
+console.log("Squares (map):", squares);
+console.log("Even numbers (filter):", evens);
+       </pre> <hr>
+    <h3>Question 11: Count 0's in an array</h3>
+    <pre >
+        const binaryArray = [0, 1, 0, 1, 0, 1, 1, 0, 0];
+
+        let zeroCount = 0;
+        
+        for (let num of binaryArray) {
+            if (num === 0) {
+                zeroCount++;
+            }
+        }
+        
+        console.log("Array:", binaryArray);
+        console.log("Number of 0's:", zeroCount);</pre>
+<hr>
+    <h3>Question 12: Count odd and even numbers in an array</h3>
+    <pre >
+        const numbers = [10, 23, 44, 55, 66, 71, 80];
+
+        let oddCount = 0;
+        let evenCount = 0;
+        
+        for (let num of numbers) {
+            if (num % 2 === 0) {
+                evenCount++;
+            } else {
+                oddCount++;
+            }
+        }
+        
+        console.log("Array:", numbers);
+        console.log("Even numbers:", evenCount);
+        console.log("Odd numbers:", oddCount);</pre>
+<hr>
+    <h3>Question 13: Count vowels in a string</h3>
+    <pre>let a="prepbytes";
+        let count =0;
+        for (let i=0;i<=a.length;i++)
+        {
+           let ch=a[i];
+           if(ch==='a'||ch==='e'||ch==='i'||ch==='o'||ch==='u'||ch==='A'||ch==='E'||ch==='I'||ch==='O'||ch==='U')
+           {
+               count++;
+           }
+        }
+        console.log(count)</pre> <hr>
+
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
